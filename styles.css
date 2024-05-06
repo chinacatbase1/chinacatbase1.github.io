@@ -76,3 +76,19 @@ html, body {
     font-size: 2.0em;
     text-align: center; /* Ensures all text in the paragraph is centered */
 }
+
+h2 {
+    color: #ffffff; /* Set text color to white */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
+    font-size: 2.0em; /* Example font size, adjust as needed */
+    margin: 20px auto; /* Center text and add vertical margin */
+    text-align: center; /* Ensure text is centered */
+}
+
+/* Apply similar styles to any other text elements as needed */
+.custom-text, .links, .footer-section p {
+    color: #ffffff; /* Set text color to white */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
+    text-align: center; /* Center text, if not already set */
+}
+
