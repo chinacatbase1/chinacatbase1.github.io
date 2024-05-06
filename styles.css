@@ -4,6 +4,7 @@ html, body {
     overflow-x: hidden; /* Disables horizontal scrolling */
     background-color: #f0f2f5; /* Sets the background color of the entire page to light grey */
     text-align: center; /* Centers content in the body */
+    padding-top: 100px; /* Adjust this value based on the height of your header image */
 }
 
 .header-img {
@@ -16,11 +17,16 @@ html, body {
     object-position: top center; /* Aligns the image at the top center */
 }
 
-.main-image {
-    width: 100%; /* Ensure the image stretches to fill the width of the viewport */
+.main-section {
+    z-index: 2; /* Ensure it's above the normal flow but below fixed elements if needed */
+    position: relative; /* Required to establish a new stacking context for z-index */
+}
+
+.icon-img {
+    width: 50%; /* Set appropriate width */
     height: auto; /* Maintain aspect ratio */
     display: block; /* Ensures images are treated as block-level elements */
-    margin: 0 auto; /* Center images horizontally with no vertical margins */
+    margin: 0 auto 15px; /* Center sub-images horizontally with 15px margin at the bottom */
 }
 
 .sub-image {
@@ -35,17 +41,8 @@ html, body {
     display: flex; /* Use flexbox for the button container */
     justify-content: center; /* Center the buttons horizontally */
     margin: 25px auto 50px; /* Add margin to top, auto on the sides, and 50px at the bottom */
-}
-
-.button-container a {
-    display: inline-block; /* Ensure the link takes only the necessary space */
-    margin: 10px; /* Add margin around the links */
-}
-
-.button-image {
-    width: 75%; /* Set the width of the button images to 75% of their original size */
-    height: auto; /* Maintain aspect ratio */
-    vertical-align: middle; /* Align the images vertically */
+    z-index: 2;
+    position: relative;
 }
 
 .disclaimer-space {
