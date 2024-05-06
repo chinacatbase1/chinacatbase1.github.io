@@ -6,7 +6,7 @@ html, body {
     text-align: center; /* Centers content in the body */
 }
 
-.header-image {
+.header-img {
     position: fixed; /* Keeps the image at the top and not moving on scroll */
     top: 0;
     left: 0;
