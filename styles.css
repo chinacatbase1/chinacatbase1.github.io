@@ -92,3 +92,14 @@ h2 {
     text-align: center; /* Center text, if not already set */
 }
 
+.links-section p, .links-section a {
+    color: #ffffff; /* Set text color to white */
+    text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000; /* Black outline */
+    text-align: center; /* Center text, applies to paragraph */
+}
+
+.links-section a {
+    text-decoration: none; /* Removes the underline from links */
+    font-size: 1.0em; /* Sets a base font size for links */
+}
+
