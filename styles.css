@@ -11,6 +11,12 @@ html, body {
     height: auto; /* Scales the height automatically based on the width */
 }
 
+.arrow-img{
+    width: 25%; /* Smaller width for the icon image */
+    height: auto; /* Maintain aspect ratio */  
+}
+
+
 .icon-img {
     width: 25%; /* Smaller width for the icon image */
     height: auto; /* Maintain aspect ratio */
