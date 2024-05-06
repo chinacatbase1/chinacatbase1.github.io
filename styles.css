@@ -13,6 +13,7 @@ html, body {
     z-index: 1000;
     width: 100vw; /* Ensures the image width covers exactly the width of the viewport */
     height: auto; /* Scales the height automatically based on the width */
+    max-height: 20vh; /* Limits the maximum height to 20% of the viewport height */
     object-fit: contain; /* Ensures the image is scaled to fit its container without being clipped or stretched */
     object-position: top center; /* Aligns the image at the top center */
 }
