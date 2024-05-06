@@ -2,10 +2,9 @@ html, body {
     margin: 0;
     padding: 0;
     overflow-x: hidden; /* Disables horizontal scrolling */
-    background-color: #f0f2f5; /* Sets the background color of the entire page white */
+    background-color: #f0f2f5; /* Sets the background color of the entire page to light grey */
     text-align: center; /* Centers content in the body */
 }
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 .header-image {
     position: fixed; /* Keeps the image at the top and not moving on scroll */
@@ -14,6 +13,8 @@ html, body {
     z-index: 1000;
     width: 100%; /* Sets the image width to cover the full width of the viewport */
     height: auto; /* Scales the height automatically based on the width */
+    object-fit: cover; /* Ensures the image covers the designated area without being cut */
+    object-position: center; /* Centers the image to avoid top cropping */
 }
 
 .main-image {
@@ -22,8 +23,6 @@ html, body {
     display: block; /* Ensures images are treated as block-level elements */
     margin: 0 auto; /* Center images horizontally with no vertical margins */
 }
-
-
 
 .sub-image {
     max-width: 50%; /* Set the maximum width of the sub-images to 50% */
@@ -66,12 +65,8 @@ html, body {
     font-size: 1.0em; /* Sets a base font size for all custom links */
 }
 
-.renounced-link {
-    color: #1877f2; /* Sets a blue color for the Renounced Txn link */
-}
-
-.burnt-link {
-    color: #1877f2; /* Sets a red color for the Burnt Txn link */
+.renounced-link, .burnt-link {
+    color: #1877f2; /* Sets a blue color for links */
 }
 
 .custom-text {
@@ -81,6 +76,3 @@ html, body {
     font-size: 2.0em;
     text-align: center; /* Ensures all text in the paragraph is centered */
 }
-
-
-
