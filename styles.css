@@ -2,7 +2,6 @@ html, body {
     margin: 0; 
     padding: 0;
     overflow-x: hidden; /* Disables horizontal scrolling */
-    overflow-y: hidden; /* Disables vertical scrolling */
     background-color: #D01E24; /* Sets the background color to the specified red */
     text-align: center; /* Centers content in the body */
 }
