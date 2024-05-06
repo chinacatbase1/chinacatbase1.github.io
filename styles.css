@@ -11,10 +11,10 @@ html, body {
     top: 0;
     left: 0;
     z-index: 1000;
-    width: 100%; /* Sets the image width to cover the full width of the viewport */
+    width: 100vw; /* Ensures the image width covers exactly the width of the viewport */
     height: auto; /* Scales the height automatically based on the width */
-    object-fit: cover; /* Ensures the image covers the designated area without being cut */
-    object-position: center; /* Centers the image to avoid top cropping */
+    object-fit: contain; /* Ensures the image is scaled to fit its container without being clipped or stretched */
+    object-position: top center; /* Aligns the image at the top center */
 }
 
 .main-image {
