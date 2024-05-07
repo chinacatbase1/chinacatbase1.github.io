@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>CHINACAT BASE</title>
-<link rel="stylesheet" href="styles.css"> <!-- Link to the external CSS file -->
+<link rel="stylesheet" href="styles.css">
 <link rel="icon" href="favicon.png" type="image/png">
 </head>
 <body>
@@ -13,9 +13,16 @@
   <source src="china.mp3" type="audio/mpeg">
   Your browser does not support the audio element.
 </audio>
+<button onclick="playAudio()" id="playButton">Play Music</button> <!-- Button to play music -->
 <script>
-  window.onload = function() {
-    document.getElementById('myAudio').play();
+  function playAudio() {
+    var audio = document.getElementById('myAudio');
+    if (audio.paused) {
+      audio.play();
+    } else {
+      audio.pause(); // This line will pause the music if it is already playing when the button is clicked again.
+      audio.currentTime = 0; // This line will restart the music from the beginning when played again.
+    }
   }
 </script>
 
@@ -23,7 +30,7 @@
 <h2>中国猫终于到达了 BASE Chain 准备负责其共产主义议程</h2>
 <div class="main-section">
   <div class="text-section">
-    <h2>你准备好加入中国共产党了吗？然后点击这只该死的中国猫！ </h2>
+    <h2>你准备好加入中国共产党了吗？然后点击这只该死的中国猫！</h2>
     <img src="arrow.gif" alt="arrow" class="arrow-img">
   </div>
   <a href="https://example-link.com">
@@ -33,7 +40,7 @@
 <h2>100% LP Locked - Ownership Renounced - No Tax</h2>
 
 <div class="links-section">
-  <p>CA: 0x000000000000000000000000000000000000 </p>
+  <p>CA: 0x000000000000000000000000000000000000</p>
   <a href="https://twitter.com/chinese_catBase" target="_blank" class="links">X</a> |
   <a href="https://t.me/BasedChinaCat" target="_blank" class="links">TELEGRAM</a> |
   <a href="https://dexscreener.com/base/0x0df9973e6fccad0f7cd600ba19657749af0d25b7" target="_blank" class="links">DEXSCREENER</a>
@@ -45,3 +52,4 @@
 
 </body>
 </html>
+
