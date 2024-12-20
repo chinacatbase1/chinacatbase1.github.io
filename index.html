@@ -2,125 +2,229 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="icon" href="turbanicon.png" type="image/png">
-    <title>Indian Brett</title>
+    <title>Based Christmas</title>
+    <link rel="icon" href="icon.png" type="image/png">
     <style>
         @font-face {
-            font-family: 'NeutonSC';
-            src: url('Neuton-SC-Extrabold.ttf') format('truetype');
+            font-family: 'GentyDemoRegular';
+            src: url('GentyDemo-Regular.ttf') format('truetype');
         }
+
+        @font-face {
+            font-family: 'WaitingForTheSunrise';
+            src: url('WaitingfortheSunrise-Regular.ttf') format('truetype');
+        }
+
         body {
-            background-color: #e38360;
             margin: 0;
-            font-family: 'NeutonSC', Arial, sans-serif;
+            font-family: Arial, sans-serif;
+            background-color: #83b9dd;
             color: white;
-            text-align: center;
+            overflow-x: hidden;
         }
-        .banner {
+
+        .hero {
+            background-image: url('bigimage.png');
+            background-size: cover;
+            background-position: center;
             width: 100%;
-            height: auto;
-            opacity: 0;
-            animation: slideDown 1s forwards, bounce 1s 1s forwards;
+            height: 50vh;
         }
+
+        .banner {
+            height: 2.5em; /* Slightly larger than the text */
+            overflow: hidden;
+            background-color: white;
+            position: relative;
+            line-height: 2.5em; /* Vertically center text */
+        }
+
+        .banner-content {
+            display: flex;
+            width: max-content;
+            animation: scroll-left 50s linear infinite; /* Continuous scrolling */
+        }
+
+        @keyframes scroll-left {
+            from {
+                transform: translateX(0%);
+            }
+            to {
+                transform: translateX(-100%);
+            }
+        }
+
+        .banner-content span {
+            font-family: 'WaitingForTheSunrise', Arial, sans-serif;
+            font-size: 1.8rem; /* Match the text size */
+            color: black;
+            margin-right: 20px; /* Spacing between text and icon */
+            display: flex;
+            align-items: center;
+        }
+
+        .banner-content img {
+            height: 1.8rem; /* Match the height of the text */
+            vertical-align: middle;
+            margin-left: 10px;
+        }
+
+        .section {
+            margin: 5% 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+        }
+
+        .centered-section {
+            margin: 5% 10%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+            margin-bottom: 10vh; /* Ensure there's space at the bottom */
+        }
+
+        .section h1, .centered-section h1 {
+            font-size: 7rem;
+            font-family: 'GentyDemoRegular', Arial, sans-serif;
+            text-shadow: 0 0 2px black;
+            margin-bottom: 10px;
+        }
+
+        .section p {
+            font-size: 1.8rem;
+            font-family: 'WaitingForTheSunrise', Arial, sans-serif;
+        }
+
         .buttons {
             display: flex;
-            justify-content: space-evenly;
-            align-items: center;
-            margin: 20px auto;
-            width: 80%;
-            opacity: 0;
-            animation: slideDown 1s forwards, bounce 1s 1s forwards;
+            gap: 20px;
+            justify-content: center;
         }
-        .buttons a {
-            text-decoration: none;
-            color: white;
-            background-color: #333;
+
+        .button {
             padding: 10px 20px;
-            font-size: 16px;
+            border: none;
             border-radius: 5px;
-            transition: background-color 0.3s;
+            font-size: 1.5rem;
+            cursor: pointer;
+            font-family: 'WaitingForTheSunrise', Arial, sans-serif;
+        }
+
+        .buy-btn {
+            background-color: grey;
+            color: white;
+        }
+
+        .chart-btn {
+            background-color: #0052ff;
+            color: white;
+        }
+
+        .footer {
+            background-color: #0052ff;
+            color: #0033ff;
             text-align: center;
+            padding: 10px;
+            font-size: 1rem;
+            font-family: Arial, sans-serif;
+            position: relative;
         }
-        .buttons a:hover {
-            background-color: #555;
+
+        .social-btn img {
+            width: 100%;
+            max-width: 80px;
+            height: auto;
         }
-        .content {
+
+        .basedicon {
+            width: 200px;
+            height: auto;
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            margin-bottom: 50px;
+        }
+
+        .filler-section {
+        height: 20vh; /* Increase the height to create more space */
+        background-color: #83b9dd; /* Optional: Match the background color */
+    }
+
+        .thesquad {
+            display: block;
             margin: 20px auto;
-            padding: 20px;
             width: 80%;
-            font-size: 38px; /* Regular text size */
-            opacity: 0;
-            animation: slideUp 1s forwards, bounce 1s 1s forwards;
-        }
-        @media (min-width: 769px) {
-            .buttons a {
-                padding: 20px 40px; /* Larger buttons on desktop */
-                font-size: 22px;
-            }
-        }
-        @media (max-width: 768px) {
-            .buttons {
-                margin-top: 20px;
-                flex-direction: column; /* Stack buttons vertically on mobile */
-            }
-            .buttons a {
-                margin-bottom: 10px; /* Add space between buttons on mobile */
-                width: 100%; /* Ensure buttons take full width */
-            }
-            .buttons a:last-child {
-                margin-bottom: 0; /* Remove margin from the last button */
-            }
-            .content {
-                font-size: 25px; /* Mobile text size */
-            }
-        }
-        @keyframes slideUp {
-            from {
-                transform: translateY(100%);
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        @keyframes slideDown {
-            from {
-                transform: translateY(-100%);
-            }
-            to {
-                transform: translateY(0);
-                opacity: 1;
-            }
-        }
-        @keyframes bounce {
-            0%, 20%, 50%, 80%, 100% {
-                transform: translateY(0);
-            }
-            40% {
-                transform: translateY(-30px);
-            }
-            60% {
-                transform: translateY(-15px);
-            }
+            max-width: 600px;
+            height: auto;
         }
     </style>
 </head>
 <body>
-    <img src="indianbrettbanner.png" alt="Banner Image" class="banner">
+<div class="hero"></div>
+<div class="banner">
+    <div class="banner-content">
+        <!-- The content will repeat dynamically -->
+    </div>
+</div>
+<script>
+    function setupBanner() {
+        const bannerContent = document.querySelector('.banner-content');
+        const content = 'BASED CHRISTMAS <img src="icon.png" alt="icon">';
+        let repeatedContent = '';
+
+        // Dynamically repeat the content until it fills the screen
+        while (repeatedContent.length < window.innerWidth * 2) {
+            repeatedContent += `<span>${content}</span>`;
+        }
+
+        bannerContent.innerHTML = repeatedContent;
+    }
+
+    window.onload = setupBanner;
+</script>
+<div class="section">
+    <h1>Based Christmas</h1>
+    <p>
+        On the BASE blockchain, a festive glow spreads wide,<br>
+        As digital tokens gather, filled with holiday pride.<br>
+        Blockchain bells echo, a carol through virtual skies,<br>
+        Crypto communities unite, as the starlit night flies.<br>
+        A based Christmas on BASE, where all tokens delight.<br>
+    </p>
     <div class="buttons">
-        <a href="https://" target="_blank">Dexscreener</a>
-        <a href="https://t.me/indianbrett" target="_blank">Telegram</a>
-        <a href="https://x.com" target="_blank">Twitter/X</a>
+        <button class="button buy-btn">BUY</button>
+        <button class="button chart-btn">CHART</button>
     </div>
-    <div class="content">
-        <h1>Welcome to Indian Brett - The Memecoin on Base!</h1>
-        <p>
-            Indian Brett is officially on base, and we are thrilled to introduce a new era in the world of memecoins. Our mission is to put an end to discrimination against "Jeets" by creating a token that celebrates and embraces Indian culture.
-        </p>
-        <p>
-            Join us on this exciting journey as we blend the fun and engaging world of memecoins with a meaningful cause. Together, let's embrace Indian culture and show the world the power of unity through Indian Brett.
-        </p>
+</div>
+
+<img src="thesquad.png" alt="The Squad" class="thesquad">
+
+<div class="centered-section">
+    <div>
+        <h1>Find Us on Socials</h1>
+        <div class="buttons">
+            <a href="https://dexscreener.com" target="_blank" class="social-btn">
+                <img src="dexscreener.png" alt="Dexscreener">
+            </a>
+            <a href="https://twitter.com" target="_blank" class="social-btn">
+                <img src="twitter.png" alt="Twitter">
+            </a>
+            <a href="https://telegram.org" target="_blank" class="social-btn">
+                <img src="telegram.png" alt="Telegram">
+            </a>
+        </div>
     </div>
+</div>
+
+<div class="filler-section"></div>
+
+<footer class="footer">
+    <p>Investing in cryptocurrencies involves risks. Always do your research before investing. Baby Tyler is a fictional token for entertainment purposes only.</p>
+    <img src="icon.png" alt="based christmas icon" class="basedicon">
+</footer>
+
 </body>
 </html>
