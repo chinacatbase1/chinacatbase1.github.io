@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>EmoBob</title>
-    <link rel="icon" type="image/png" href="emobob_icon.png">
+    <title>BASEBAR</title>
+    <link rel="icon" type="image/png" href="basebar.png">
     <style>
         body {
             margin: 0;
@@ -14,95 +14,88 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, #1A1A1A, #3A3A3A);
-            color: #f5f5f5;
-            font-family: 'Courier New', Courier, monospace;
-            text-shadow: 0 0 5px rgba(255, 255, 255, 0.3);
+            background: linear-gradient(135deg, #FF4500, #FF8C00, #FFD700, #FF4500);
+            background-size: 300% 300%;
+            animation: gradientAnimation 8s infinite ease-in-out alternate;
+            color: #ffffff;
+            font-family: Arial, sans-serif;
+            overflow: hidden;
+            position: relative;
+        }
+
+        @keyframes gradientAnimation {
+            0% {
+                background-position: 0% 50%;
+            }
+            50% {
+                background-position: 100% 50%;
+            }
+            100% {
+                background-position: 0% 50%;
+            }
         }
 
         .logo-container {
-            width: 200px;
-            height: 200px;
-            animation: emoBobBounce 2s infinite;
+            width: 250px;
+            height: 250px;
+            animation: pulse 4s infinite ease-in-out;
         }
 
         .logo-container img {
             width: 100%;
             height: 100%;
-            filter: grayscale(100%) drop-shadow(0 0 10px #ff00ff);
         }
 
-        @keyframes emoBobBounce {
-            0%, 100% {
-                transform: translateY(0);
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
             }
             50% {
-                transform: translateY(-20px);
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
             }
         }
-
+        
         .button {
-            display: block;
+            display: flex;
+            align-items: center;
+            justify-content: center;
             margin: 10px 0;
             padding: 10px 20px;
-            text-align: center;
             text-decoration: none;
             border-radius: 5px;
             font-size: 18px;
-            color: #f5f5f5;
-            background: #ff00ff;
-            border: 1px solid #f5f5f5;
-            transition: background 0.3s ease, transform 0.2s ease;
+            color: #FFFFFF;
+            background: #FF4500;
+            transition: background 0.3s ease;
         }
-
+        
         .button:hover {
-            background: #7d007d;
-            transform: scale(1.05);
+            background: #f0f0f0;
         }
 
-        .title {
-            font-size: 36px;
-            margin-bottom: 20px;
-            text-align: center;
-        }
-
-        .subtitle {
-            font-size: 18px;
-            margin-bottom: 40px;
-            text-align: center;
-            color: #ccc;
-        }
-
-        .video-container {
-            margin-top: 20px;
-            width: 80%;
-            max-width: 800px;
-        }
-
-        .video-container video {
-            width: 100%;
-            border: 2px solid #ff00ff;
-            border-radius: 10px;
+        .button img {
+            width: 24px;
+            height: 24px;
+            margin-right: 10px;
         }
     </style>
 </head>
 <body>
-    <h1 class="title">EmoBob</h1>
-    <p class="subtitle">The crypto market has spongebob feeling a bit emo rn.</p>
-
     <div class="logo-container">
-        <img src="emobob_icon.png" alt="EmoBob Logo">
+        <img src="basebar.png" alt="Basebar">
     </div>
-    
-    <a class="button" href="https://t.me/emobob_base" target="_blank">Telegram</a>
-    <a class="button" href="https://youtube.com/playlist?list=PLrGBEIS2ipp0ude76LvsFj4c6e3CfQEAC&si=fuBLgvkmSOG0tRQ8" target="_blank">Emo Playlist</a>
-    <a class="button" href="https://dexscreener.com" target="_blank">Buy $EMO</a>
 
-    <div class="video-container">
-        <video controls>
-            <source src="emo.mp4" type="video/mp4">
-            Your browser does not support the video tag.
-        </video>
-    </div>
+    <a class="button" href="https://dexscreener.com" target="_blank">
+        <img src="dexscreener.png" alt="DEXScreener Logo">DEXScreener
+    </a>
+    <a class="button" href="https://twitter.com" target="_blank">
+        <img src="twitter.png" alt="Twitter Logo">Twitter
+    </a>
+    <a class="button" href="https://telegram.org" target="_blank">
+        <img src="telegram.png" alt="Telegram Logo">Telegram
+    </a>
 </body>
 </html>
