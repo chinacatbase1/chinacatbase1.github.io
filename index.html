@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>BASEBAR</title>
-    <link rel="icon" type="image/png" href="basebar.png">
+    <title>Chonkaku</title>
+    <link rel="icon" type="image/png" href="chonkakuicon.png">
     <style>
         body {
             margin: 0;
@@ -14,7 +14,7 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, #FF4500, #FF8C00, #FFD700, #FF4500);
+            background: linear-gradient(135deg, #FFC1CC, #FFDEE9, #FFF5E1, #FFC1CC);
             background-size: 300% 300%;
             animation: gradientAnimation 8s infinite ease-in-out alternate;
             color: #ffffff;
@@ -24,21 +24,15 @@
         }
 
         @keyframes gradientAnimation {
-            0% {
-                background-position: 0% 50%;
-            }
-            50% {
-                background-position: 100% 50%;
-            }
-            100% {
-                background-position: 0% 50%;
-            }
+            0% { background-position: 0% 50%; }
+            50% { background-position: 100% 50%; }
+            100% { background-position: 0% 50%; }
         }
 
         .logo-container {
             width: 250px;
             height: 250px;
-            animation: pulse 4s infinite ease-in-out;
+            animation: float 4s infinite ease-in-out;
         }
 
         .logo-container img {
@@ -46,56 +40,54 @@
             height: 100%;
         }
 
-        @keyframes pulse {
-            0% {
-                transform: scale(1);
-            }
-            50% {
-                transform: scale(1.1);
-            }
-            100% {
-                transform: scale(1);
-            }
+        @keyframes float {
+            0% { transform: translateY(0px); }
+            50% { transform: translateY(-10px); }
+            100% { transform: translateY(0px); }
         }
-        
-        .button {
+
+        .button-container {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            margin: 10px 0;
-            padding: 10px 20px;
-            text-decoration: none;
-            border-radius: 5px;
-            font-size: 18px;
-            color: #FFFFFF;
-            background: #FF4500;
-            transition: background 0.3s ease;
+            gap: 20px;
+            margin-top: 20px;
         }
-        
+
+        .button {
+            display: inline-block;
+            transition: transform 0.2s ease-in-out;
+        }
+
         .button:hover {
-            background: #f0f0f0;
+            transform: scale(1.1);
         }
 
         .button img {
-            width: 24px;
-            height: 24px;
-            margin-right: 10px;
+            width: auto;
+            height: 100px;
+        }
+
+        @media (max-width: 768px) {
+            .button img {
+                height: 80px;
+            }
         }
     </style>
 </head>
 <body>
     <div class="logo-container">
-        <img src="basebar.png" alt="Basebar">
+        <img src="chonkakuicon.png" alt="Chonkaku Logo">
     </div>
 
-    <a class="button" href="https://dexscreener.com/base/0xac08022438f1eaef59b42f263b4389472f88a892" target="_blank">
-        <img src="dexscreener.png" alt="DEXScreener Logo">DEXScreener
-    </a>
-    <a class="button" href="https://x.com/basebarvape" target="_blank">
-        <img src="twitter.png" alt="Twitter Logo">Twitter
-    </a>
-    <a class="button" href="https://t.me/basebarvape" target="_blank">
-        <img src="telegram.png" alt="Telegram Logo">Telegram
-    </a>
+    <div class="button-container">
+        <a class="button" href="https://moonshot.com" target="_blank">
+            <img src="moonshot_cloud.png" alt="Moonshot">
+        </a>
+        <a class="button" href="https://telegram.org" target="_blank">
+            <img src="telegram_cloud.png" alt="Telegram">
+        </a>
+        <a class="button" href="https://twitter.com" target="_blank">
+            <img src="twitter_cloud.png" alt="Twitter">
+        </a>
+    </div>
 </body>
 </html>
