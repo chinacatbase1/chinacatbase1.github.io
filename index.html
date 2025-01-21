@@ -3,8 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Chonkaku</title>
-    <link rel="icon" type="image/png" href="chonkakuicon.png">
+    <title>Baby Akuma Inu</title>
+    <link rel="icon" type="image/png" href="babyakumaicon.png">
     <style>
         body {
             margin: 0;
@@ -14,7 +14,7 @@
             align-items: center;
             justify-content: center;
             min-height: 100vh;
-            background: linear-gradient(135deg, #FFC1CC, #FFDEE9, #FFF5E1, #FFC1CC);
+            background: linear-gradient(135deg, #300000, #660000, #990000, #300000);
             background-size: 300% 300%;
             animation: gradientAnimation 8s infinite ease-in-out alternate;
             color: #ffffff;
@@ -53,41 +53,32 @@
         }
 
         .button {
-            display: inline-block;
+            padding: 15px 30px;
+            background-color: black;
+            color: white;
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            border-radius: 5px;
             transition: transform 0.2s ease-in-out;
+            border: none;
+            cursor: pointer;
         }
 
         .button:hover {
             transform: scale(1.1);
         }
-
-        .button img {
-            width: auto;
-            height: 100px;
-        }
-
-        @media (max-width: 768px) {
-            .button img {
-                height: 80px;
-            }
-        }
     </style>
 </head>
 <body>
     <div class="logo-container">
-        <img src="chonkakuicon.png" alt="Chonkaku Logo">
+        <img src="babyakumaicon.png" alt="Baby Akuma Logo">
     </div>
 
     <div class="button-container">
-        <a class="button" href="https://dexscreener.com/base/0x8d0a59f26a6d6443185d27e8349ce3f43d414de7" target="_blank">
-            <img src="moonshot_cloud.png" alt="Moonshot">
-        </a>
-        <a class="button" href="https://t.me/Chonkaku" target="_blank">
-            <img src="telegram_cloud.png" alt="Telegram">
-        </a>
-        <a class="button" href="https://x.com/chonkaku" target="_blank">
-            <img src="twitter_cloud.png" alt="Twitter">
-        </a>
+        <a class="button" href="https://moonshot.com" target="_blank">Moonshot</a>
+        <a class="button" href="https://telegram.org" target="_blank">Telegram</a>
+        <a class="button" href="https://twitter.com" target="_blank">Twitter</a>
     </div>
 </body>
 </html>
